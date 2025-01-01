@@ -49,6 +49,8 @@ pre h2 {
   padding: 2rem;
   border: 2px solid var(--border-color);
   margin-left: calc(8ch);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .update_img_container {
