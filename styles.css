@@ -61,6 +61,11 @@ pre h2 {
   padding: 0;
 }
 
+.middle_img_container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
