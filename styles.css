@@ -73,6 +73,12 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
+video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 h1, h2, h3{
   font-weight: 900;
   margin-bottom: 1.5rem;
