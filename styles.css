@@ -31,6 +31,26 @@ body {
   padding: 2rem;
 }
 
+/* Default dark mode header image */
+.header-image-dark {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+.header-image-light {
+  display: none;
+}
+
+/* Switch in light mode */
+[data-theme="light"] .header-image-dark {
+  display: none;
+}
+[data-theme="light"] .header-image-light {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
 pre h2 {
   margin: 0;
   padding: 0;
@@ -191,17 +211,13 @@ iframe {
 }
 
 /* Header Images  */
-/* .header-flex {
+.header-flex {
  display: flex;
+ justify-content: center;
  align-items: center;
- margin-left: 0;
+ margin-bottom: 1rem;
+ gap: 1rem;
 }
-
-.header-image {
- width: 100px;
- height: auto;
- margin-left: 0;
-} */
 
 /* Theme Toggle */
 #theme-toggle {
