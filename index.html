@@ -27,6 +27,49 @@
     <pre><h2>Update updates[] = {</h2></pre>
     <pre><h2>  {</h2></pre>
     <div class="update_container">
+      <h3>Update_7: Begin prototyping for embedded project; create & develop bare_metal_c collection</h3>
+      <p>
+        commit be8897f98e3a948d977df118deb9a78e9a2068eb<br>
+        Date: Sun Jan 12 22:13:36 2025 -0800<br>
+        Create program to handle button board inputs which toggle on board led      </p>
+      <p>LOG: Started prototyping with components including a breadboard, jumper wires, an swd programmer, my newly soldered STM32F411 blackpill board, and a button board. The goal of this session was to test my understanding of breadboard wiring and register level programming by writing a program which turns the led on board the blackpill ON while holding a button down and OFF when the button is released. This program was added to a collection of bare metal programs and drivers I have been working on within the directory "bare_metal_c". In my program "button_board_init" which I spoke of earlier, I included one of my drivers called "led_on_off" which allows me to manipulate the state of the blackpill's led depending on inputs with the button board. While writing this low level firmware I have also been learning some basic arm assembly code in the form of my startup.s files for my programs. After making programs which achieve some effect, I have been transposing many of them to driver code which I may then use later in my work.</p>
+      <div class="update_img_container">
+        <img src="images/update_7_a.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_7_b.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_7_c.png">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_7_d.png">
+      </div>
+    </div>
+    <pre><h2>  },</h2></pre>
+
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
+      <h3>Update_6: Soldering STM32</h3>
+      <p>
+        commit unavailable
+        Date: Sun Jan 12 2025
+      </p>
+      <p>LOG: Finally acquired all my soldering supplies including a hakko iron, stand, cleaner, desoldering wick, and lead free silver solder. While there is room for improvement, I am happy with the results of my session. After a bit of practice, I was able to get some pretty nice looking joints on my board. After testing my peripherals, all solder joints function as expected with their peripheral devices.</p>
+      <div class="update_img_container">
+        <img src="images/update_6_a.jpeg">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_6_b.jpeg">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_6_c.jpeg">
+      </div>
+    </div>
+    <pre><h2>  },</h2></pre> 
+
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
       <h3>Update_5: Begin work on toy_compiler</h3>
       <p>
         commit 91eecd47768fbfcef6e013498c9365c415cadc23<br>
@@ -108,7 +151,7 @@
         Date: Wed Dec 18 00:35:39 2024 -0800<br>
         Create input loop; add shell prompt
       </p>
-      <p>LOG: Started work on my unix shell program. The goal of this project is to create a shell with similar funcionality to bash, while adding some of my own unique features and ideas which will be useful to my personal workflow.</p>
+      <p>LOG: Started work on my unix shell program. The goal of this project is to create a shell with similar functionality to bash, while adding some of my own unique features and ideas which will be useful to my personal workflow.</p>
       <div class="update_img_container">
         <img src="images/update_1.png">
       </div>
