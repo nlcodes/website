@@ -25,8 +25,34 @@
       <img class="header-image-dark" src="images/ascii_camel.png">
       <img class="header-image-light" src="images/ascii_camel_light.png">
     </header>
-    <p>Embedded and systems programmer with a focus on close to metal software/firmware.</br>I build efficient C programs from microcontroller firmware to OS level tools.</br>Linux enthusiast and games programmer.</p>
+    <p>Embedded and systems programmer with a focus on close to metal software/firmware.</br>I build efficient C programs from microcontroller firmware to OS level tools.</br>Linux user and games programmer. Also writing Scheme Lisp programs.</p>
     <pre><h2>Update updates[] = {</h2></pre>
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
+      <h3>Update_8: stm32_hal</h3>
+      <p>
+        commit b670cb869d204f70be8f0a5ebe2a7f4fa6d413e1<br>
+        Date: Wed Jan 22 03:08:03 2025 -0800<br>
+        Create main hal file hal.h; write and include hal files for oled in hal.h; write oled driver files and include in oled hal files</p>
+      <p>LOG: Organized driver code into hal code (hardware abstraction layer). Forked bare_metal_c into a new repository, which split the project in two. The original bare_metal_c now only includes programs intended to be flashed by themselves directly to mcu, and used to accomplish a small bare metal interaction. I then moved the drivers library to a repository "stm32_hal", and re wrote them to integrate into a larger hal system. The purpose of hal is to make it easy to include, and call upon, drivers through an abstraction layer. This allows for one include "hal.h", instead of targeted driver includes. It makes my driver code easy to use again in future projects, easy to call, and more modular. While I am not generally a fan of abstraction, this abstraction layer is useful to me for modularity, portability, and organization purpose; It is not overly complex, and provides a cohesive framework to manage my drivers.</p>
+      <div class="update_img_container">
+        <img src="images/update_8_a.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_8_b.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_8_c.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_8_d.png">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_8_e.png">
+      </div>
+    </div>
+    <pre><h2>  },</h2></pre>
+
     <pre><h2>  {</h2></pre>
     <div class="update_container">
       <h3>Update_7: Begin prototyping for embedded project; create & develop bare_metal_c collection</h3>
@@ -54,7 +80,7 @@
     <div class="update_container">
       <h3>Update_6: Soldering STM32</h3>
       <p>
-        commit unavailable
+        commit unavailable<br>
         Date: Sun Jan 12 2025
       </p>
       <p>LOG: Finally acquired all my soldering supplies including a hakko iron, stand, cleaner, desoldering wick, and lead free silver solder. While there is room for improvement, I am happy with the results of my session. After a bit of practice, I was able to get some pretty nice looking joints on my board. After testing my peripherals, all solder joints function as expected with their peripheral devices.</p>
