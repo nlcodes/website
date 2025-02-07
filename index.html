@@ -25,30 +25,50 @@
       <img class="header-image-dark" src="images/ascii_camel.png">
       <img class="header-image-light" src="images/ascii_camel_light.png">
     </header>
-    <p>Embedded and systems programmer with a focus on close to metal software/firmware.</br>I build efficient C programs from microcontroller firmware to OS level tools.</br>Linux user and games programmer. Also writing Scheme Lisp programs.</p>
+    <p>Embedded and systems programmer focused on close to metal software/firmware.</br>I build efficient C programs from microcontroller firmware to OS level tools. Also writing Scheme Lisp programs. Linux, vim, st, & dwm enjoyer. Games & vanilla web programming.</p>
     <pre><h2>Update updates[] = {</h2></pre>
     <pre><h2>  {</h2></pre>
     <div class="update_container">
-      <h3>Update_8: stm32_hal</h3>
+      <h3>Update_9: stm32_hal</h3>
       <p>
         commit b670cb869d204f70be8f0a5ebe2a7f4fa6d413e1<br>
         Date: Wed Jan 22 03:08:03 2025 -0800<br>
         Create main hal file hal.h; write and include hal files for oled in hal.h; write oled driver files and include in oled hal files</p>
       <p>LOG: Organized driver code into hal code (hardware abstraction layer). Forked bare_metal_c into a new repository, which split the project in two. The original bare_metal_c now only includes programs intended to be flashed by themselves directly to mcu, and used to accomplish a small bare metal interaction. I then moved the drivers library to a repository "stm32_hal", and re wrote them to integrate into a larger hal system. The purpose of hal is to make it easy to include, and call upon, drivers through an abstraction layer. This allows for one include "hal.h", instead of targeted driver includes. It makes my driver code easy to use again in future projects, easy to call, and more modular. While I am not generally a fan of abstraction, this abstraction layer is useful to me for modularity, portability, and organization purpose; It is not overly complex, and provides a cohesive framework to manage my drivers.</p>
       <div class="update_img_container">
-        <img src="images/update_8_a.png">
+        <img src="images/update_9_a.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_9_b.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_9_c.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_9_d.png">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_9_e.png">
+      </div>
+    </div>
+    <pre><h2>  },</h2></pre>
+
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
+      <h3>Update_8: OLED init/draw success! Button board success!</h3>
+      <p>
+        commit 406ab01565cd479e91c0c28b88840768f91605b6<br>
+        Date: Sun Jan 19 16:27:31 2025 -0800<br>
+        Create screen_init program; add program to programs dir</p>
+      <p>LOG: Finished work on screen_init program (handles both init and writing pixels to adafruit oled). This took a little while to complete, and is a big win. This is especially true because just before completing this program, I also finished implementing a button board reading program "button_board_init". This program take input from my 4x4 button matrix, reads it and flashes test led on my blackpill. Both of these programs have been added to my bare_metal_c programs collection. With both of these driver programs working well, I am well prepared to begin work on the mcu game logic for matrix_break. All required peripherals are now successfully initialized!</p>
+      <div class="update_img_container">
+        <img src="images/update_8_a.jpeg">
       </div>
       <div class="update_img_container middle_img_container">
         <img src="images/update_8_b.png">
       </div>
-      <div class="update_img_container middle_img_container">
-        <img src="images/update_8_c.png">
-      </div>
-      <div class="update_img_container middle_img_container">
-        <img src="images/update_8_d.png">
-      </div>
       <div class="update_img_container">
-        <img src="images/update_8_e.png">
+        <img src="images/update_8_c.png">
       </div>
     </div>
     <pre><h2>  },</h2></pre>
