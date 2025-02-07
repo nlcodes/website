@@ -25,8 +25,28 @@
       <img class="header-image-dark" src="images/ascii_camel.png">
       <img class="header-image-light" src="images/ascii_camel_light.png">
     </header>
-    <p>Embedded and systems programmer focused on close to metal software/firmware.</br>I build efficient C programs from microcontroller firmware to OS level tools. Also writing Scheme Lisp programs. Linux, vim, st, & dwm enjoyer. Games & vanilla web programming.</p>
+    <p>Embedded and systems programmer focused on close to metal software/firmware.</br>I build efficient C programs from microcontroller firmware to OS level tools.</br>Also writing Scheme Lisp programs. Linux, vim, st, dwm, and tmux enjoyer.</br>Using my oscilloscope and soldering components. Games and vanilla web programming.</p>
     <pre><h2>Update updates[] = {</h2></pre>
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
+      <h3>Update_10: Oscilloscope SDA/3v3 readings</h3>
+      <p>
+        commit unavailable<br>
+        Date: Wed Jan 28 2025
+      </p>
+      <p>LOG: I got my rigol dho804 oscilloscope! This device has been very fun to work with. After setting up the scope, I was able to obtain readings on sda data and 3v3 power. Just look at those beautiful waveforms! Now that I know the essentials of operating this machine, I was able to validate i2c protocol data transfer, and steady power flow to components. Even though I already knew i2c was working on my drivers, it's good to see it visualized on the waveform to reinforce there aren't any major issues. I'm sure this tool will come in handy with future projects/protocols.</p>
+      <div class="update_img_container">
+        <img src="images/update_10_a.jpeg">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_10_b.jpeg">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_10_c.jpeg">
+      </div>
+    </div>
+    <pre><h2>  },</h2></pre>
+
     <pre><h2>  {</h2></pre>
     <div class="update_container">
       <h3>Update_9: stm32_hal</h3>
@@ -55,7 +75,7 @@
 
     <pre><h2>  {</h2></pre>
     <div class="update_container">
-      <h3>Update_8: OLED init/draw success! Button board success!</h3>
+      <h3>Update_8: OLED init/draw success; Button board success!</h3>
       <p>
         commit 406ab01565cd479e91c0c28b88840768f91605b6<br>
         Date: Sun Jan 19 16:27:31 2025 -0800<br>
@@ -75,7 +95,7 @@
 
     <pre><h2>  {</h2></pre>
     <div class="update_container">
-      <h3>Update_7: Begin prototyping for embedded project; create & develop bare_metal_c collection</h3>
+      <h3>Update_7: Begin prototyping for embedded project; create and develop bare_metal_c collection</h3>
       <p>
         commit be8897f98e3a948d977df118deb9a78e9a2068eb<br>
         Date: Sun Jan 12 22:13:36 2025 -0800<br>
