@@ -31,34 +31,55 @@
     <pre><h2>Update updates[] = {</h2></pre>
     <pre><h2>  {</h2></pre>
     <div class="update_container">
-      <h3>Update_11: Scheme Lisp C utils</h3>
+      <h3>Update_12: Scheme lisp c utils</h3>
       <p>
         commit bbe7e4e3e2cd85bd53de21220f74ec7c90afa0cc<br>
         Sun Feb 2 23:58:58 2025 -0800<br>
         Create c utils for for scheme program; rewrite gambit include syntax for c libraries</p>
-      <p>LOG: I have recently taken a great interest in the lisp programming language. I'm specifically interested in scheme lisp, more specifically gambit scheme. I love the clean straightfowrard syntax lisp provides, as well as its "free" nature. The language is extremely flexible and recursive which is unique, and I very much appreciate it. It seems like a powerful tool for scripting, as well as extending c's functionality beyond its scope; Which, justifies its value to me. While i'm not typically a fan of higher level abstraction, lisp appears as something rather special. That being said I am happy to add it to my toolkit for a higher level option when needed regarding scripting, prototyping, etc. In this update I have written a lisp utility for gambit programming. For those not aware, gambit takes lisp code and can compile directly to c. One may also write inline lisp in C using an interpreter. That being said, I have metaprogrammed gambit scheme here in this program to change its own include syntax. This simplifies the syntax in a way I enjoy. While this is a small program, I intend to dive deeper and write more utilities in lisp, which will benefit my workflow. The possibilities are endless!</p>
+      <p>LOG: I have recently taken a great interest in the lisp programming language. I'm specifically interested in scheme lisp, more specifically gambit scheme. I love the clean straightfowrard syntax lisp provides, as well as its "free" nature. The language is extremely flexible and recursive which is unique, and I very much appreciate it. It seems like a powerful tool for scripting, as well as extending c's functionality beyond its scope; Which justifies its value to me. While I'm not typically a fan of higher level abstraction, lisp appears as something rather special. That being said I am happy to add it to my toolkit for a higher level option when needed regarding scripting, prototyping, etc. In this update I have written a lisp utility for gambit programming. For those not aware, gambit takes lisp code and can compile directly to c. One may also write inline lisp in c using an interpreter. That being said, I have metaprogrammed gambit scheme here in this program to change its own include syntax. This simplifies the syntax in a way I enjoy. While this is a small program, I intend to dive deeper and write more utilities in lisp, which will benefit my workflow. The possibilities are endless!</p>
       <div class="update_img_container">
-        <img src="images/update_11_a.png">
+        <img src="images/update_12_a.png">
       </div>
     </div>
     <pre><h2>  },</h2></pre>
 
     <pre><h2>  {</h2></pre>
     <div class="update_container">
-      <h3>Update_10: Oscilloscope SDA/3v3 readings</h3>
+      <h3>Update_11: Oscilloscope sda/3v3 readings</h3>
       <p>
         commit unavailable<br>
         Date: Wed Jan 28 2025
       </p>
       <p>LOG: I got my rigol dho804 oscilloscope! This device has been very fun to work with. After setting up the scope, I was able to obtain readings on sda data and 3v3 power. Just look at those beautiful waveforms! Now that I know the essentials of operating this machine, I was able to validate i2c protocol data transfer, and steady power flow to components. Even though I already knew i2c was working on my drivers, it's good to see it visualized on the waveform to reinforce there aren't any major issues. I'm sure this tool will come in handy with future projects/protocols.</p>
       <div class="update_img_container">
-        <img src="images/update_10_a.jpeg">
+        <img src="images/update_11_a.jpeg">
       </div>
       <div class="update_img_container middle_img_container">
-        <img src="images/update_10_b.jpeg">
+        <img src="images/update_11_b.jpeg">
       </div>
       <div class="update_img_container">
-        <img src="images/update_10_c.jpeg">
+        <img src="images/update_11_c.jpeg">
+      </div>
+    </div>
+    <pre><h2>  },</h2></pre>
+
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
+      <h3>Update_10: Workflow improvements; Install/make st, dwm, and tmux</h3>
+      <p>
+        commit 0ab70047468dd4f0761cd05584644dd857f017a6<br>
+        Date: Wed Jan 26 2025<br>
+        Add scrollback reflow patch and resolve conflicts
+      </p>
+      <p>LOG: Updated workflow to tools which fit my style and needs better. Switched from using i3 window manager and alacritty terminal emulator, to dwm for window manager and st for terminal emulator. After learning about these tools, they seemed like the perfect fit for me. They are written with c, and use minimal lines of code. They come out of the box with minimal features, and expect you to apply patches as needed, add or modify the source code in any way you like, and compile each on your own after you are done with config. This is perfect for my needs and aligns directly with my philosophy. My builds for these can be found at the bottom of my projects page on my site under "Utilities", or on my github. The original versions can be found on <a href="https://www.suckless.org">suckless.org</a>. Please check them out if you have a minimal design philosophy, like fast efficient software, and don't mind coding and compiling your own tools. I included this as an update because I am very happy with how well they run after the initial setup and would like more people to try it. They have been amazing for my workflow. I also started using tmux to manage windows within my window manager. This has been a game changer as well because it allows me to save sessions of window groups in between reboots; it is a very nice tool as well. Pictures of dwm and st, as well as their configs are included below.</p>
+      <div class="update_img_container">
+        <img src="images/update_10_a.png">
+      </div>
+      <div class="update_img_container middle_img_container">
+        <img src="images/update_10_b.png">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_10_c.png">
       </div>
     </div>
     <pre><h2>  },</h2></pre>
@@ -91,7 +112,7 @@
 
     <pre><h2>  {</h2></pre>
     <div class="update_container">
-      <h3>Update_8: OLED init/draw success; Button board success!</h3>
+      <h3>Update_8: Adafruit oled init/draw success; button board success!</h3>
       <p>
         commit 406ab01565cd479e91c0c28b88840768f91605b6<br>
         Date: Sun Jan 19 16:27:31 2025 -0800<br>
@@ -134,7 +155,7 @@
 
     <pre><h2>  {</h2></pre>
     <div class="update_container">
-      <h3>Update_6: Soldering STM32</h3>
+      <h3>Update_6: Soldering stm32</h3>
       <p>
         commit unavailable<br>
         Date: Sun Jan 12 2025
