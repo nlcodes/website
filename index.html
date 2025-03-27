@@ -31,6 +31,17 @@
     <pre><h2>Update updates[] = {</h2></pre>
     <pre><h2>  {</h2></pre>
     <div class="update_container">
+      <h3>Update_13: Create basic first version of stm32_hal project: FEB 2025</h3>
+      <p>
+        commit ec94605fa8614eb34af152e892c947487e60cd15<br>
+        Tue Feb 25 01:39:12 2025 -0800<br>
+        </p>
+      <p>LOG: This update covers the whole of Feb 2025, as I accomplished a solid amount of programming and made significant progress on my goals during this month. So, I did not have time to update my website. The commit history is also available on github for further review. To summarize the main things I accomplished for stm32_hal: I had already created the essential code for most of the drivers used in the hal, so this month included building the base for the hal, linking all the drivers to the central file and creating the base version of the library. This version included init code and abstracted hal code calling upon it, for all peripherals the library will initially support. These include an Adafruit 128x64 oled display, a 4x4 button board, and the built in test led on the pcb. So, this version supported basic functions for all of them, and all tests were passed. I had a working version but! next I wanted to implement timer interrupts. This was a design choice made to improve startup, program functioning, and add a cohesive system of timer delays. This also makes the library more modular and gives the user precise control of timing, compared to using busy loops in the first version. So, I also began implementing this system near the end of the month. Lastly, while the hal project remains 100% c code, I did implement a make script using gambit scheme lisp which one can call to build their c project using the library with supported peripherals.</p>
+    </div>
+    <pre><h2>  },</h2></pre>
+
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
       <h3>Update_12: Scheme lisp c utils</h3>
       <p>
         commit bbe7e4e3e2cd85bd53de21220f74ec7c90afa0cc<br>
@@ -126,7 +137,7 @@
         commit 406ab01565cd479e91c0c28b88840768f91605b6<br>
         Date: Sun Jan 19 16:27:31 2025 -0800<br>
         Create screen_init program; add program to programs dir</p>
-      <p>LOG: Finished work on screen_init program (handles both init and writing pixels to adafruit oled). This took a little while to complete, and is a big win. This is especially true because just before completing this program, I also finished implementing a button board reading program "button_board_init". This program take input from my 4x4 button matrix, reads it and flashes test led on my blackpill. Both of these programs have been added to my bare_metal_c programs collection. With both of these driver programs working well, I am well prepared to begin work on the mcu game logic for matrix_break. All required peripherals are now successfully initialized!</p>
+      <p>LOG: Finished work on screen_init program (handles both init and writing pixels to adafruit oled). This took a little while to complete, and is a big win. This is especially true because just before completing this program, I also finished implementing a button board reading program "button_board_init". This program takes input from my 4x4 button matrix, reads it and flashes test led on my blackpill. Both of these programs have been added to my bare_metal_c programs collection. With both of these driver programs working well, I am well prepared to begin work on the mcu game logic for matrix_break. All required peripherals are now successfully initialized!</p>
       <div class="update_img_container">
         <img src="images/update_8_a.jpeg">
       </div>
