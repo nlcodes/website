@@ -31,12 +31,38 @@
     <pre><h2>Update updates[] = {</h2></pre>
     <pre><h2>  {</h2></pre>
     <div class="update_container">
+      <h3>Update_14: Complete stm32_hal project: MARCH 2025</h3>
+      <p>
+        commit a7d6e2f60487f86aa0565fd0fbe636a98edeb9a4<br>
+        Date: Sat Mar 15 23:44:17 2025 -0700<br>
+        Create function for scaling binary bitmaps 2x</p>
+      <p>LOG: This update cover the whole of March 2025. Similar to the last update, I have been very busy and making progress on the hal project whenever possible. All of the logs, as usual are available on github. I accomplished a decent amount of work inlcuding, implementing interrupt driven delays across the entire library. I did a lot of general design refactoring, added various functions to the hal, updated and added essential documentation, and tested all capabilities of the hal. Everything works as intended with my hardware so far. There may be more updates improve the functionality, refactoring the codebase, etc. But, the first working version is officially released! I was able to create several small videogames and simulations with the hal using my oled and button boards attatched to my breadboard with jumper wires. After completing this, I have already began working on implementing it in my next project. This will be an action puzzle game written for my peripherals and microcontoller, which I will be making a finished hardware build for to run the game. I also started writing a different game using my library for the hardware that I may very well complete when time allows. Writing this Library was a challenge, and I learned a huge amount about close to metal programming. It feels amazing to write my own init code and hal library from the ground up, rather than following the common path of using gui software, or prewritten libraries for a hardware abstraction layer. Now I can re use this in other programs I write needing these peripherals. The modular nature of the library will allow me to easily update it as needed.</p>
+      <div class="update_img_container">
+        <img src="images/update_14_a.jpeg">
+      </div>
+    </div>
+    <pre><h2>  },</h2></pre>
+
+    <pre><h2>  {</h2></pre>
+    <div class="update_container">
       <h3>Update_13: Create basic first version of stm32_hal project: FEB 2025</h3>
       <p>
         commit ec94605fa8614eb34af152e892c947487e60cd15<br>
-        Tue Feb 25 01:39:12 2025 -0800<br>
+        Date: Tue Feb 25 01:39:12 2025 -0800<br>
         </p>
-      <p>LOG: This update covers the whole of Feb 2025, as I accomplished a solid amount of programming and made significant progress on my goals during this month. So, I did not have time to update my website. The commit history is also available on github for further review. To summarize the main things I accomplished for stm32_hal: I had already created the essential code for most of the drivers used in the hal, so this month included building the base for the hal, linking all the drivers to the central file and creating the base version of the library. This version included init code and abstracted hal code calling upon it, for all peripherals the library will initially support. These include an Adafruit 128x64 oled display, a 4x4 button board, and the built in test led on the pcb. So, this version supported basic functions for all of them, and all tests were passed. I had a working version but! next I wanted to implement timer interrupts. This was a design choice made to improve startup, program functioning, and add a cohesive system of timer delays. This also makes the library more modular and gives the user precise control of timing, compared to using busy loops in the first version. So, I also began implementing this system near the end of the month. Lastly, while the hal project remains 100% c code, I did implement a make script using gambit scheme lisp which one can call to build their c project using the library with supported peripherals.</p>
+      <p>LOG: This update covers the whole of Feb 2025, as I accomplished a solid amount of programming and made significant progress on my goals during this month. So, I did not have time to update my website. The commit history is also available on github for further review. To summarize the main things I accomplished for stm32_hal: I had already created the essential code for most of the drivers used in the hal, so this month included building the base for the hal, linking all the drivers to the central file and creating the base version of the library. This version included init code and abstracted hal code calling upon it, for all peripherals the library will initially support. These include an Adafruit 128x64 oled display, a 4x4 button board, and the built in test led on the pcb. So, this version supported basic functions for all of them, and all tests were passed. I had a working version but! next I wanted to implement timer interrupts. This was a design choice made to improve startup, program functioning, and add a cohesive system of timer delays. This also makes the library more modular and gives the user precise control of timing, compared to using busy loops in the first version. So, I also began implementing this system near the end of the month. Lastly, while the hal project remains 100% c code, I did implement a make script using gambit scheme lisp which one can call to build their c project using the library with supported peripherals. I also got a new keyboard which I'm really enjoying, and went camping this month! The keyboard has less keys than usual and speeds up my workflow a lot. My camping trip was amazing and a much needed break from daily life. I came back feeling refreshed and ready to complete my project. :)</p>
+      <div class="update_img_container">
+        <img src="images/update_13_a.jpeg">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_13_b.jpeg">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_13_c.jpeg">
+      </div>
+      <div class="update_img_container">
+        <img src="images/update_13_d.jpeg">
+      </div>
     </div>
     <pre><h2>  },</h2></pre>
 
@@ -45,7 +71,7 @@
       <h3>Update_12: Scheme lisp c utils</h3>
       <p>
         commit bbe7e4e3e2cd85bd53de21220f74ec7c90afa0cc<br>
-        Sun Feb 2 23:58:58 2025 -0800<br>
+        Date: Sun Feb 2 23:58:58 2025 -0800<br>
         Create c utils for for scheme program; rewrite gambit include syntax for c libraries</p>
       <p>LOG: I have recently taken a great interest in the lisp programming language. I'm specifically interested in scheme lisp, more specifically gambit scheme. I love the clean straightfowrard syntax lisp provides, as well as its "free" nature. The language is extremely flexible and recursive which is unique, and I very much appreciate it. It seems like a powerful tool for scripting, as well as extending c's functionality beyond its scope; Which justifies its value to me. While I'm not typically a fan of higher level abstraction, lisp appears as something rather special. That being said I am happy to add it to my toolkit for a higher level option when needed regarding scripting, prototyping, etc. In this update I have written a lisp utility for gambit programming. For those not aware, gambit takes lisp code and can compile directly to c. One may also write inline lisp in c using an interpreter. That being said, I have metaprogrammed gambit scheme here in this program to change its own include syntax. This simplifies the syntax in a way I enjoy. While this is a small program, I intend to dive deeper and write more utilities in lisp, which will benefit my workflow. The possibilities are endless!</p>
       <div class="update_img_container">
